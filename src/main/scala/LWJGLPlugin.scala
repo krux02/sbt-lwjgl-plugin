@@ -169,7 +169,7 @@ object LWJGLPlugin extends Plugin {
 
     fork := true,
     javaOptions <+= (copyDir, lwjgl.os).map{ (dir, os) => 
-      "-Djava.library.path=%s".format(dir / os._1)
+      "-Dorg.lwjgl.librarypath=%s".format(dir / os._1)
     }
   )
 
